@@ -18,8 +18,8 @@ Todos los archivos se guardan en la carpeta **`archivos_generados`** por defecto
 
 ### 1. Clonar el repositorio
 ```bash
-git clone https://github.com/usuario/proyecto-datos.git
-cd proyecto-datos
+git clone https://github.com/Juanda09/CFP_grupo_8.git
+cd CFP_grupo_8
 ```
 
 ### 2. Compilar y ejecutar en Eclipse
