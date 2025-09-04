@@ -18,8 +18,8 @@ Todos los archivos se guardan en la carpeta **`archivos_generados`** por defecto
 
 ### 1. Clonar el repositorio
 ```bash
-git clone https://github.com/usuario/proyecto-datos.git
-cd proyecto-datos
+git clone https://github.com/Juanda09/CFP_grupo_8.git
+cd CFP_grupo_8
 ```
 
 ### 2. Compilar y ejecutar en Eclipse
@@ -88,6 +88,9 @@ Al finalizar, el programa muestra un resumen en consola como el siguiente:
 ---
 
 ## 👨‍💻 Autor
-- **Nombre:** Juan David Huertas Zapata  
+- **Grupo 8:**
+- **Integrantes:** 
+  - Juan David Huertas Zapata 
+  -  
 - **Correo:** h0774762@gmail.com  
 - **Institución:** Politécnico Grancolombiano  
