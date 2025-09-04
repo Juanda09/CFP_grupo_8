@@ -1,7 +1,7 @@
 # Proyecto: Generación y clasificación de datos - Entrega 1
 
 ## 📌 Descripción
-Este proyecto corresponde a la **Entrega 1** de la asignatura de Especialización.  
+Este proyecto corresponde a la **Entrega 1** de la asignatura de CONCEPTOS FUNDAMENTALES DE PROGRAMACIÓN.  
 El objetivo es generar archivos planos que sirvan como **entrada** para el programa principal que organizará los datos en entregas posteriores.  
 
 La clase principal es **`GenerateInfoFiles`**, que al ejecutarse crea los siguientes archivos:
