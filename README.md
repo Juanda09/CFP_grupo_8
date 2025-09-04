@@ -88,6 +88,9 @@ Al finalizar, el programa muestra un resumen en consola como el siguiente:
 ---
 
 ## 👨‍💻 Autor
-- **Nombre:** Juan David Huertas Zapata  
+- **Grupo 8:**
+- **Integrantes:** 
+  - Juan David Huertas Zapata 
+  -  
 - **Correo:** h0774762@gmail.com  
 - **Institución:** Politécnico Grancolombiano  
