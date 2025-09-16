@@ -1,20 +1,15 @@
-# Proyecto: Generación y clasificación de datos - Entrega 1
+# Proyecto: Generación y clasificación de datos - Entregas 1 y 2
 
 ## 📌 Descripción
-Este proyecto corresponde a la **Entrega 1** de la asignatura de Especialización.  
-El objetivo es generar archivos planos que sirvan como **entrada** para el programa principal que organizará los datos en entregas posteriores.  
+Este proyecto corresponde a las **Entregas 1 y 2** de la asignatura de Especialización.  
+El objetivo es simular un sistema de ventas usando **archivos planos** como base de datos:  
 
-La clase principal es **`GenerateInfoFiles`**, que al ejecutarse crea los siguientes archivos:
-
-- `productos.csv` → Contiene la lista de productos disponibles con su ID, nombre y precio.  
-- `vendedores.csv` → Contiene la información de los vendedores (tipo de documento, ID, nombre y apellido).  
-- `vendedor_<id>.csv` → Contiene las ventas realizadas por cada vendedor de forma independiente.  
-
-Todos los archivos se guardan en la carpeta **`archivos_generados`** por defecto, o en una ruta personalizada indicada al ejecutar el programa.
+- **Entrega 1:** se generan archivos de productos, vendedores y ventas.  
+- **Entrega 2:** se procesan esos archivos para obtener reportes de ventas consolidados.  
 
 ---
 
-## ⚙️ Ejecución
+## ⚙️ Ejecución paso a paso
 
 ### 1. Clonar el repositorio
 ```bash
@@ -22,78 +17,104 @@ git clone https://github.com/Juanda09/CFP_grupo_8.git
 cd CFP_grupo_8
 ```
 
-### 2. Compilar el código
-Desde la carpeta del proyecto:
+### 2. Compilar las clases
+Desde la carpeta raíz del proyecto:
 ```bash
 javac src/GenerateInfoFiles.java
+javac src/Main.java
 ```
 
-### 3. Ejecutar el programa
+---
+
+### 3. Ejecutar **Entrega 1** (generación de datos)
+La clase `GenerateInfoFiles` crea los archivos de entrada en la carpeta **archivos_generados**.
+
 ```bash
 java -cp src GenerateInfoFiles
 ```
 
-También puedes indicar una **ruta personalizada** para guardar los archivos:
-```bash
-java -cp src GenerateInfoFiles "C:/MisDatos/Proyecto/"
-```
+🔎 **¿Qué sucede aquí?**
+1. Se crea la carpeta `archivos_generados` (si no existe).  
+2. Se genera el catálogo de productos en `productos.csv`.  
+3. Se genera la lista de vendedores en `vendedores.csv`.  
+4. Por cada vendedor, se genera un archivo individual `vendedor_<id>.csv` con sus ventas.  
+5. Al final, se muestra en consola un resumen de lo creado.  
 
----
-
-## 📂 Archivos generados
-
-### 1. productos.csv
-Catálogo de productos con ID, nombre y precio.
-```csv
-1;Laptop;2500000.5
-2;Mouse;80000.0
-3;Teclado;150000.99
-4;Monitor;950000.0
-```
-
-### 2. vendedores.csv
-Lista de vendedores con su tipo de documento, número, nombre y apellido.
-```csv
-CC;123456789;Carlos;Gomez
-TI;987654321;Ana;Perez
-CE;456789123;Juan;Martinez
-```
-
-### 3. vendedor_<id>.csv
-Archivo individual por cada vendedor con sus ventas.
-
-Ejemplo:
-```csv
-CC;123456789
-1;2;
-3;1;
-2;5;
-```
-
-Esto significa que el vendedor con documento **CC 123456789** vendió:
-- 2 unidades del producto con ID 1 (Laptop)
-- 1 unidad del producto con ID 3 (Teclado)
-- 5 unidades del producto con ID 2 (Mouse)
-
----
-
-## 📊 Salida en consola
-
-Al finalizar, el programa muestra un resumen en consola como el siguiente:
+Ejemplo de salida en consola:
 ```
 📂 Iniciando generación en: /ruta/archivos_generados
 🛒 productos.csv → 4 productos generados.
 👥 vendedores.csv → 3 vendedores generados.
 📄 vendedor_123456789.csv → 3 ventas.
 📄 vendedor_987654321.csv → 2 ventas.
-📄 vendedor_456789123.csv → 5 ventas.
 
 📊 Resumen de generación:
 - productos.csv → 4 registros
 - vendedores.csv → 3 registros
-- Archivos de vendedores → 3 archivos
-✅ ¡Archivos generados exitosamente!
+- Archivos de vendedores → 2 archivos
+✅ Generación finalizada con éxito.
 ```
+
+Puedes indicar una **ruta personalizada**:
+```bash
+java -cp src GenerateInfoFiles "C:/MisDatos/Proyecto/"
+```
+
+---
+
+### 4. Ejecutar **Entrega 2** (procesamiento de reportes)
+La clase `Main` lee los archivos creados en la Entrega 1 y genera los reportes de salida.
+
+```bash
+java -cp src Main
+```
+
+🔎 **¿Qué sucede aquí?**
+1. Se cargan los productos desde `productos.csv`.  
+2. Se cargan los vendedores desde `vendedores.csv`.  
+3. Se recorren todos los archivos `vendedor_<id>.csv`.  
+   - Se calcula el total recaudado por cada vendedor.  
+   - Se acumula la cantidad total vendida por cada producto.  
+4. Se generan dos reportes:  
+   - `reporte_vendedores.csv` (ordenado por ventas totales descendentes).  
+   - `reporte_productos.csv` (ordenado por cantidad vendida descendente).  
+5. Al final, se muestra un resumen en consola.  
+
+Ejemplo de salida en consola:
+```
+🚀 Iniciando procesamiento en: /ruta/archivos_generados
+🛒 productos.csv cargado → 4 productos.
+👥 vendedores.csv cargado → 3 vendedores.
+📄 vendedor_123456789.csv procesado.
+📄 vendedor_987654321.csv procesado.
+📊 reporte_vendedores.csv generado.
+📊 reporte_productos.csv generado.
+
+📊 Resumen de reportes:
+- Productos procesados: 4
+- Vendedores procesados: 3
+- Archivos de reportes generados: 2
+
+✅ Procesamiento finalizado con éxito.
+```
+
+También puedes indicar una **ruta personalizada**:
+```bash
+java -cp src Main "C:/MisDatos/Proyecto/"
+```
+
+---
+
+## 📂 Archivos generados
+
+### Entrega 1
+- **productos.csv** → catálogo de productos.  
+- **vendedores.csv** → lista de vendedores.  
+- **vendedor_<id>.csv** → ventas individuales por vendedor.  
+
+### Entrega 2
+- **reporte_vendedores.csv** → vendedores con el total recaudado, ordenados descendentemente.  
+- **reporte_productos.csv** → productos con la cantidad total vendida, ordenados descendentemente.  
 
 ---
 
