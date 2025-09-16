@@ -5,7 +5,7 @@ Este proyecto corresponde a las **Entregas 1 y 2** de la asignatura de Especiali
 El objetivo es simular un sistema de ventas usando **archivos planos** como base de datos:  
 
 - **Entrega 1:** se generan archivos de productos, vendedores y ventas.  
-- **Entrega 2:** se procesan esos archivos para obtener reportes de ventas consolidados.  
+- **Entrega 2:** se procesan esos archivos para obtener reportes de ventas consolidados con información más detallada.  
 
 ---
 
@@ -75,10 +75,10 @@ java -cp src Main
 3. Se recorren todos los archivos `vendedor_<id>.csv`.  
    - Se calcula el total recaudado por cada vendedor.  
    - Se acumula la cantidad total vendida por cada producto.  
-4. Se generan dos reportes:  
+4. Se generan dos reportes con **encabezados claros**:  
    - `reporte_vendedores.csv` (ordenado por ventas totales descendentes).  
    - `reporte_productos.csv` (ordenado por cantidad vendida descendente).  
-5. Al final, se muestra un resumen en consola.  
+5. Al final, se muestra un **resumen extendido en consola** con el mejor vendedor y el producto más vendido.  
 
 Ejemplo de salida en consola:
 ```
@@ -94,6 +94,8 @@ Ejemplo de salida en consola:
 - Productos procesados: 4
 - Vendedores procesados: 3
 - Archivos de reportes generados: 2
+🏆 Mejor vendedor: Ana Perez con $5150000.00
+📦 Producto más vendido: Mouse con 20 unidades
 
 ✅ Procesamiento finalizado con éxito.
 ```
@@ -114,7 +116,17 @@ java -cp src Main "C:/MisDatos/Proyecto/"
 
 ### Entrega 2
 - **reporte_vendedores.csv** → vendedores con el total recaudado, ordenados descendentemente.  
+  ```csv
+  Nombre;TotalRecaudado
+  Carlos Gomez;5150001.99
+  Ana Perez;2850000.00
+  ```
 - **reporte_productos.csv** → productos con la cantidad total vendida, ordenados descendentemente.  
+  ```csv
+  Producto;CantidadVendida
+  Mouse;6
+  Laptop;2
+  ```
 
 ---
 
