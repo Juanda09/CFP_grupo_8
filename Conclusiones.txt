@@ -1,0 +1,10 @@
+Conclusiones del Proyecto - Grupo 8
+
+1. Lo aprendido:
+Durante el desarrollo del proyecto aprendimos a trabajar con el lenguaje Java en un escenario práctico que involucra la creación, lectura y procesamiento de archivos planos (CSV). Reforzamos conocimientos en el uso de colecciones como Map y List, el manejo de excepciones para asegurar que el programa no falle ante errores comunes, y la implementación de buenas prácticas de programación orientada a objetos. Además, comprendimos la importancia de estructurar el código en clases separadas con responsabilidades claras, lo que facilita su comprensión y mantenimiento.
+
+2. Aplicaciones profesionales:
+Los conocimientos adquiridos en este proyecto tienen múltiples aplicaciones en el ámbito profesional. La manipulación de archivos planos y el procesamiento de datos son tareas frecuentes en el análisis de información, control de inventarios, gestión de ventas y desarrollo de sistemas administrativos. Estas habilidades permiten construir herramientas que automaticen procesos, generen reportes confiables y ayuden en la toma de decisiones basada en datos.
+
+3. Dificultades presentadas:
+Durante el desarrollo enfrentamos varias dificultades. Una de ellas fue la correcta validación de los datos al momento de leer los archivos CSV, evitando errores en los reportes por registros incompletos o mal estructurados. También resultó un reto diseñar un flujo de ejecución que cumpliera con los requisitos sin necesidad de interacción con el usuario, garantizando que el programa fuera totalmente autónomo. Finalmente, la coordinación entre los archivos generados en la primera parte del proyecto y los procesados en la segunda exigió cuidado en la estructura y consistencia de los datos. Superar estos retos fortaleció nuestras habilidades de depuración, trabajo en equipo y organización del código.
