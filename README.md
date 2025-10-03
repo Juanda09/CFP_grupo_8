@@ -40,6 +40,21 @@ java -cp src GenerateInfoFiles
 4. Por cada vendedor, se genera un archivo individual `vendedor_<id>.csv` con sus ventas.  
 5. Al final, se muestra en consola un resumen de lo creado o un error en caso de fallo.  
 
+📌 **Ejemplo de salida en consola:**
+```
+📂 Iniciando generación en: /ruta/archivos_generados
+🛒 productos.csv → 4 productos generados.
+👥 vendedores.csv → 3 vendedores generados.
+📄 vendedor_123456789.csv → 3 ventas.
+📄 vendedor_987654321.csv → 2 ventas.
+
+📊 Resumen de generación:
+- productos.csv → 4 registros
+- vendedores.csv → 3 registros
+- Archivos de vendedores → 2 archivos
+✅ Generación finalizada con éxito.
+```
+
 ---
 
 ### 4. Ejecutar **Entrega 2** → procesamiento de reportes
@@ -59,6 +74,26 @@ java -cp src Main
    - `reporte_vendedores.csv` (ordenado por ventas totales descendentes).  
    - `reporte_productos.csv` (ordenado por cantidad vendida descendente).  
 5. Se muestra un **resumen extendido en consola** con el mejor vendedor y el producto más vendido.  
+
+📌 **Ejemplo de salida en consola:**
+```
+🚀 Iniciando procesamiento en: /ruta/archivos_generados
+🛒 productos.csv cargado → 4 productos.
+👥 vendedores.csv cargado → 3 vendedores.
+📄 vendedor_123456789.csv procesado.
+📄 vendedor_987654321.csv procesado.
+📊 reporte_vendedores.csv generado.
+📊 reporte_productos.csv generado.
+
+📊 Resumen de reportes:
+- Productos procesados: 4
+- Vendedores procesados: 3
+- Archivos de reportes generados: 2
+🏆 Mejor vendedor: Ana Perez con $5150000.00
+📦 Producto más vendido: Mouse con 20 unidades
+
+✅ Procesamiento finalizado con éxito.
+```
 
 ---
 
