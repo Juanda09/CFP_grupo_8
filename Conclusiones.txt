@@ -1,10 +1,32 @@
 Conclusiones del Proyecto - Grupo 8
 
-1. Lo aprendido:
-Durante el desarrollo del proyecto aprendimos a trabajar con el lenguaje Java en un escenario práctico que involucra la creación, lectura y procesamiento de archivos planos (CSV). Reforzamos conocimientos en el uso de colecciones como Map y List, el manejo de excepciones para asegurar que el programa no falle ante errores comunes, y la implementación de buenas prácticas de programación orientada a objetos. Además, comprendimos la importancia de estructurar el código en clases separadas con responsabilidades claras, lo que facilita su comprensión y mantenimiento.
 
-2. Aplicaciones profesionales:
-Los conocimientos adquiridos en este proyecto tienen múltiples aplicaciones en el ámbito profesional. La manipulación de archivos planos y el procesamiento de datos son tareas frecuentes en el análisis de información, control de inventarios, gestión de ventas y desarrollo de sistemas administrativos. Estas habilidades permiten construir herramientas que automaticen procesos, generen reportes confiables y ayuden en la toma de decisiones basada en datos.
+El proyecto estableció una base sólida al integrar las clases encargadas tanto de la generación de datos como de su procesamiento. 
+La clase GenerateInfoFiles permitió la creación de archivos de prueba coherentes, mientras que la clase Main posibilitó la lectura, 
+organización y cálculo de métricas clave, logrando un sistema funcional que simula un entorno de ventas y produce reportes útiles.
 
-3. Dificultades presentadas:
-Durante el desarrollo enfrentamos varias dificultades. Una de ellas fue la correcta validación de los datos al momento de leer los archivos CSV, evitando errores en los reportes por registros incompletos o mal estructurados. También resultó un reto diseñar un flujo de ejecución que cumpliera con los requisitos sin necesidad de interacción con el usuario, garantizando que el programa fuera totalmente autónomo. Finalmente, la coordinación entre los archivos generados en la primera parte del proyecto y los procesados en la segunda exigió cuidado en la estructura y consistencia de los datos. Superar estos retos fortaleció nuestras habilidades de depuración, trabajo en equipo y organización del código.
+A nivel global, el trabajo permitió alcanzar los siguientes aprendizajes y resultados:
+
+Lo aprendido
+o Se fortalecieron conocimientos en Java, particularmente en el manejo de archivos planos (CSV), colecciones como Map y List, 
+  y en el diseño modular orientado a objetos.
+o Se comprendió la importancia de estructurar el código en clases con responsabilidades claras, aplicando principios de claridad, 
+  reutilización y escalabilidad.
+o Se reforzó la capacidad de trabajar con excepciones y validaciones de datos para garantizar la robustez del sistema.
+
+Aplicaciones profesionales
+o Las destrezas adquiridas tienen aplicación directa en la automatización de procesos de información, como el control de inventarios, 
+  gestión de ventas o análisis de datos en sistemas administrativos.
+o El enfoque en la generación de reportes automáticos refuerza competencias valiosas para escenarios donde la toma de decisiones se 
+  apoya en información consolidada y confiable.
+
+Dificultades presentadas
+o Uno de los principales retos fue garantizar la consistencia de los datos entre los archivos generados y los procesados, evitando 
+  errores derivados de registros incompletos o mal estructurados.
+o También supuso un desafío diseñar un flujo de ejecución totalmente autónomo, sin requerir interacción del usuario, asegurando que 
+  el sistema cumpliera los requisitos de forma automática.
+o Finalmente, la coordinación entre los miembros del equipo y la documentación del código exigieron un esfuerzo adicional para mantener 
+  claridad y coherencia en todas las fases del desarrollo.
+
+En síntesis, el proyecto no solo cumplió con los objetivos académicos propuestos, sino que también permitió adquirir habilidades y 
+destrezas aplicables a contextos profesionales, fortaleciendo competencias técnicas y de trabajo colaborativo.
