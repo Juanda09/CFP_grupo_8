@@ -1,11 +1,12 @@
-# Proyecto: Generación y clasificación de datos - Entregas 1 y 2
+# Proyecto: Generación y clasificación de datos - Entrega Final (1, 2 y 3)
 
 ## 📌 Descripción
-Este proyecto corresponde a las **Entregas 1 y 2** de la asignatura de Especialización.  
-El objetivo es simular un sistema de ventas usando **archivos planos** como base de datos:  
+Este proyecto corresponde a la **Entrega final** de la asignatura de Especialización en Programación.  
+El objetivo es simular un sistema de ventas usando **archivos planos** como base de datos, a través de tres fases:
 
-- **Entrega 1:** se generan archivos de productos, vendedores y ventas.  
-- **Entrega 2:** se procesan esos archivos para obtener reportes de ventas consolidados con información más detallada.  
+- **Entrega 1:** Se generan los archivos de entrada (`productos.csv`, `vendedores.csv` y `vendedor_<id>.csv`).  
+- **Entrega 2:** Se procesan los archivos de entrada para obtener reportes (`reporte_vendedores.csv` y `reporte_productos.csv`).  
+- **Entrega 3:** Entrega final bien documentada, con las dos clases principales (`GenerateInfoFiles` y `Main`), mensajes de éxito/error, sin interacción con el usuario y con el archivo `conclusion.txt`.
 
 ---
 
@@ -20,56 +21,35 @@ cd CFP_grupo_8
 ### 2. Compilar las clases
 Desde la carpeta raíz del proyecto:
 ```bash
-javac src/GenerateInfoFiles.java
-javac src/Main.java
+javac src/GenerateInfoFiles.java src/Main.java
 ```
 
 ---
 
-### 3. Ejecutar **Entrega 1** (generación de datos)
+### 3. Ejecutar **Entrega 1** → generación de datos
 La clase `GenerateInfoFiles` crea los archivos de entrada en la carpeta **archivos_generados**.
 
 ```bash
 java -cp src GenerateInfoFiles
 ```
 
-🔎 **¿Qué sucede aquí?**
+🔎 **Pasos realizados automáticamente:**
 1. Se crea la carpeta `archivos_generados` (si no existe).  
 2. Se genera el catálogo de productos en `productos.csv`.  
 3. Se genera la lista de vendedores en `vendedores.csv`.  
 4. Por cada vendedor, se genera un archivo individual `vendedor_<id>.csv` con sus ventas.  
-5. Al final, se muestra en consola un resumen de lo creado.  
-
-Ejemplo de salida en consola:
-```
-📂 Iniciando generación en: /ruta/archivos_generados
-🛒 productos.csv → 4 productos generados.
-👥 vendedores.csv → 3 vendedores generados.
-📄 vendedor_123456789.csv → 3 ventas.
-📄 vendedor_987654321.csv → 2 ventas.
-
-📊 Resumen de generación:
-- productos.csv → 4 registros
-- vendedores.csv → 3 registros
-- Archivos de vendedores → 2 archivos
-✅ Generación finalizada con éxito.
-```
-
-Puedes indicar una **ruta personalizada**:
-```bash
-java -cp src GenerateInfoFiles "C:/MisDatos/Proyecto/"
-```
+5. Al final, se muestra en consola un resumen de lo creado o un error en caso de fallo.  
 
 ---
 
-### 4. Ejecutar **Entrega 2** (procesamiento de reportes)
+### 4. Ejecutar **Entrega 2** → procesamiento de reportes
 La clase `Main` lee los archivos creados en la Entrega 1 y genera los reportes de salida.
 
 ```bash
 java -cp src Main
 ```
 
-🔎 **¿Qué sucede aquí?**
+🔎 **Pasos realizados automáticamente:**
 1. Se cargan los productos desde `productos.csv`.  
 2. Se cargan los vendedores desde `vendedores.csv`.  
 3. Se recorren todos los archivos `vendedor_<id>.csv`.  
@@ -78,32 +58,7 @@ java -cp src Main
 4. Se generan dos reportes con **encabezados claros**:  
    - `reporte_vendedores.csv` (ordenado por ventas totales descendentes).  
    - `reporte_productos.csv` (ordenado por cantidad vendida descendente).  
-5. Al final, se muestra un **resumen extendido en consola** con el mejor vendedor y el producto más vendido.  
-
-Ejemplo de salida en consola:
-```
-🚀 Iniciando procesamiento en: /ruta/archivos_generados
-🛒 productos.csv cargado → 4 productos.
-👥 vendedores.csv cargado → 3 vendedores.
-📄 vendedor_123456789.csv procesado.
-📄 vendedor_987654321.csv procesado.
-📊 reporte_vendedores.csv generado.
-📊 reporte_productos.csv generado.
-
-📊 Resumen de reportes:
-- Productos procesados: 4
-- Vendedores procesados: 3
-- Archivos de reportes generados: 2
-🏆 Mejor vendedor: Ana Perez con $5150000.00
-📦 Producto más vendido: Mouse con 20 unidades
-
-✅ Procesamiento finalizado con éxito.
-```
-
-También puedes indicar una **ruta personalizada**:
-```bash
-java -cp src Main "C:/MisDatos/Proyecto/"
-```
+5. Se muestra un **resumen extendido en consola** con el mejor vendedor y el producto más vendido.  
 
 ---
 
@@ -127,6 +82,10 @@ java -cp src Main "C:/MisDatos/Proyecto/"
   Mouse;6
   Laptop;2
   ```
+
+### Entrega 3
+- Entrega final con documentación consolidada.  
+- Archivo `conclusion.txt` con aprendizajes, aplicaciones profesionales y dificultades encontradas.  
 
 ---
 
